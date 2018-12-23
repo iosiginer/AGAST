@@ -1,7 +1,10 @@
-package com.company;
-
 import java.util.ArrayList;
 
+/**
+ * Parent class for all the question types.
+ * Holds two strings: the interrogative, which is the basic phrasing of the question,
+ * and the correct answer. Also holds a list of the options given to the user.
+ */
 public class Question {
 
     private String interrogative;
