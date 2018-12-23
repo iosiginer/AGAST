@@ -5,7 +5,7 @@ import java.util.ArrayList;
  * Holds two strings: the interrogative, which is the basic phrasing of the question,
  * and the correct answer. Also holds a list of the options given to the user.
  */
-public class Question {
+public abstract class Question {
 
     private String interrogative;
     private ArrayList<String> options;
@@ -16,6 +16,8 @@ public class Question {
         this.setOptions(options);
         this.setCorrectAnswer(correctAnswer);
     }
+
+    public abstract String GetQuestion();
 
     public boolean CheckAnswer(String givenAnswer) {
         return givenAnswer.equals(correctAnswer);

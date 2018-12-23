@@ -1,3 +1,4 @@
+import javax.xml.crypto.Data;
 import java.util.ArrayList;
 import java.util.Random;
 
@@ -8,12 +9,14 @@ import java.util.Random;
  * Also holds Randy, a pretty cool guy in charge of giving us random numbers .
  */
 public class QuestionFactory {
+    private DataRetriever dataRetriever;
     private ArrayList<Question> askedQuestions;
     private Random randy;
     private int questionTypesNum = 5;
 
 
     QuestionFactory() {
+        dataRetriever = new DataRetriever();
         randy = new Random();
     }
 
