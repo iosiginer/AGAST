@@ -2,17 +2,16 @@ import java.util.ArrayList;
 
 /**
  * Parent class for all the question types.
- * Holds two strings: the interrogative, which is the basic phrasing of the question,
+ * Holds two strings: the phrasing, which is the basic phrasing of the question,
  * and the correct answer. Also holds a list of the options given to the user.
  */
 public abstract class Question {
-
-    private String interrogative;
+    private String phrasing;
     private ArrayList<String> options;
     private String correctAnswer;
 
-    Question(String interrogative, ArrayList<String> options, String correctAnswer) {
-        this.setInterrogative(interrogative);
+    Question(String phrasing, ArrayList<String> options, String correctAnswer) {
+        this.setPhrasing(phrasing);
         this.setOptions(options);
         this.setCorrectAnswer(correctAnswer);
     }
@@ -23,12 +22,12 @@ public abstract class Question {
         return givenAnswer.equals(correctAnswer);
     }
 
-    public String getInterrogative() {
-        return interrogative;
+    public String getPhrasing() {
+        return phrasing;
     }
 
-    public void setInterrogative(String interrogative) {
-        this.interrogative = interrogative;
+    public void setPhrasing(String phrasing) {
+        this.phrasing = phrasing;
     }
 
     public ArrayList<String> getOptions() {
@@ -46,4 +45,6 @@ public abstract class Question {
     public void setCorrectAnswer(String correctAnswer) {
         this.correctAnswer = correctAnswer;
     }
+
+    private boolean CheckIf
 }

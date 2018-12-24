@@ -8,7 +8,7 @@ import java.util.Random;
  * Holds a list of asked questions, so no question repeats itself.
  * Also holds Randy, a pretty cool guy in charge of giving us random numbers .
  */
-public class QuestionFactory {
+public class QuestionFactory implements Factory {
     private DataRetriever dataRetriever;
     private ArrayList<Question> askedQuestions;
     private Random randy;
@@ -30,6 +30,11 @@ public class QuestionFactory {
         //TODO
 
         return new Question();
+    }
+
+    @Override
+    public boolean CheckIfQuestionIsNew(Question question) {
+        foreach (Question question, )
     }
 
     public ArrayList<Question> getAskedQuestions() {
