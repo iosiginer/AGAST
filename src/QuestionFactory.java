@@ -12,7 +12,7 @@ public class QuestionFactory implements Factory {
     private DataRetriever dataRetriever;
     private ArrayList<Question> askedQuestions;
     private Random randy;
-    private int questionTypesNum = 5;
+    private int questionTypesNum = 1;   // TODO: this is the number of implemented question types. If you add one, add here
 
 
     QuestionFactory() {
@@ -25,16 +25,27 @@ public class QuestionFactory implements Factory {
      * @return
      */
     public Question NextQuestion() {
-        int i = randy.nextInt(questionTypesNum);
-
+        int type = randy.nextInt(questionTypesNum);
+        switch(type) {
+            case 1: return createSongToArtistQuestion();
+        }
         //TODO
 
-        return new Question();
+        return null;
+    }
+
+    private Question createSongToArtistQuestion() {
     }
 
     @Override
     public boolean CheckIfQuestionIsNew(Question question) {
-        foreach (Question question, )
+        //TODO: loop to check if question was asked before.
+        //loop
+        boolean isRepeated = false;
+        if(question.GetQuestion().equals(currentQuestion.GetQuestion())) {
+            isRepeated = true;
+        }
+        return isRepeated;
     }
 
     public ArrayList<Question> getAskedQuestions() {

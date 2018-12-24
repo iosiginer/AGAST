@@ -10,8 +10,7 @@ public abstract class Question {
     private ArrayList<String> options;
     private String correctAnswer;
 
-    Question(String phrasing, ArrayList<String> options, String correctAnswer) {
-        this.setPhrasing(phrasing);
+    Question(ArrayList<String> options, String correctAnswer) {
         this.setOptions(options);
         this.setCorrectAnswer(correctAnswer);
     }
@@ -24,10 +23,6 @@ public abstract class Question {
 
     public String getPhrasing() {
         return phrasing;
-    }
-
-    public void setPhrasing(String phrasing) {
-        this.phrasing = phrasing;
     }
 
     public ArrayList<String> getOptions() {
