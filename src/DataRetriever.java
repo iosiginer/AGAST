@@ -28,6 +28,8 @@ public class DataRetriever {
         return null;
     }
 
-    //TODO: Create more functions for queries. Do it as generically as possible.
+    public Artist GetAllArtistData(String artist) {
 
+    }
+    
 }
